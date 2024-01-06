@@ -17,6 +17,8 @@ class BrickBreaker extends FlameGame
       : super(
             camera: CameraComponent.withFixedResolution(
                 width: gameWidth, height: gameHeight));
+  
+  final ValueNotifier<int> score = ValueNotifier(0);
   final rand = math.Random();
   
   late PlayState _playState;
@@ -57,6 +59,7 @@ class BrickBreaker extends FlameGame
     world.removeAll(world.children.query<Bat>());
 
     playState = PlayState.playing;
+    score.value = 0;
 
     world.add(
       Ball(
