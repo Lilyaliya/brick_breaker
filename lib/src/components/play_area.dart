@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class PlayArea extends RectangleComponent with HasGameReference<BrickBreaker>{
   PlayArea()
       : super(
-          paint: Paint()..color = const Color.fromARGB(255, 226, 255, 123),
+          paint: Paint()..color = const Color.fromARGB(255, 56, 56, 56),
           children: [RectangleHitbox()]
         );
 
